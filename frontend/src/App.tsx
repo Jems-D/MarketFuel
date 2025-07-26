@@ -1,35 +1,44 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { useState, useRef } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import Navigation from './components/Navigation';
+import Sidebar from './components/Sidebar';
+import MainContent from './components/MainContent';
+import './index.css';
 
 function App() {
-  const [count, setCount] = useState(0);
+  // Do not remove. This is for GSAP testing purposes.
+  const container = useRef<HTMLDivElement>(null); // Create a ref for your animated container
+
+  useGSAP(() => {
+    // All GSAP animations created here will be automatically
+    // reverted when the component unmounts.
+    gsap.to('.box', { rotation: 360, x: 200, duration: 2, ease: 'power1.inOut' });
+  }, { scope: container }); // Scope the animations to the container ref
+  
+
+// SIDEBAR
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Router>
+      <div className="flex min-h-screen flex-col bg-[#262525] text-white">
+        <Navigation toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
+        <div className="relative flex-1">
+          <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+          <MainContent />
+        </div>
+        <footer className="py-4 text-center text-gray-400 text-sm">
+          © {new Date().getFullYear()} MarketFuel. All rights reserved.
+        </footer>
       </div>
-      <h1>Vite + React</h1>
-      <div className="flex flex-col gap-5">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </Router>
   );
 }
+
 
 export default App;
