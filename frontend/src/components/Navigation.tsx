@@ -21,8 +21,8 @@ const Navigation: React.FC<NavigationProps> = ({ toggleSidebar, isSidebarOpen })
           </button>
         )}
       </div>
-      <div className="flex items-center gap-6">
-        <button className="text-lg font-semibold text-white">Dashboard</button>
+      <div className="flex items-center gap-10 pr-8">
+        <button className="text-lg font-semibold text-white">Placeholder</button>
         <button className="text-lg font-semibold text-white">Placeholder</button>
         <button className="text-lg font-semibold text-white">Placeholder</button>
       </div>

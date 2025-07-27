@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import { BarChart3, Home, Waves, Calendar, Map, Droplet } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -52,16 +54,58 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               ✕
             </button>
           </div>
-          <ul className="flex-1 overflow-y-auto p-2">
-            {['Gas Prices', 'Airdrop Calendar', 'Fear & Greed Index', 'Whale Watch', 'Crypto Heat Map'].map((item) => (
-              <li 
-                key={item}
-                className="mb-1 rounded p-3 text-white transition-colors hover:bg-white/10 cursor-pointer"
+          <div className="flex flex-1 flex-col overflow-y-auto px-4 py-6">
+            <nav className="space-y-1">
+              <Link
+                to="/"
+                className="group flex items-center rounded-lg px-4 py-3 text-gray-300 transition-colors hover:bg-white/10 hover:text-white"
+                onClick={onClose}
               >
-                {item}
-              </li>
-            ))}
-          </ul>
+                <Home className="mr-3 h-5 w-5" />
+                <span>Dashboard</span>
+              </Link>
+              <Link
+                to="/"
+                className="group flex items-center rounded-lg px-4 py-3 text-gray-300 transition-colors hover:bg-white/10 hover:text-white"
+                onClick={onClose}
+              >
+                <Droplet className="mr-3 h-5 w-5" />
+                <span>Gas Prices</span>
+              </Link>
+              <Link
+                to="/fear-greed-index"
+                className="group flex items-center rounded-lg px-4 py-3 text-gray-300 transition-colors hover:bg-white/10 hover:text-white"
+                onClick={onClose}
+              >
+                <BarChart3 className="mr-3 h-5 w-5" />
+                <span>Fear & Greed Index</span>
+              </Link>
+              <Link
+                to="/"
+                className="group flex items-center rounded-lg px-4 py-3 text-gray-300 transition-colors hover:bg-white/10 hover:text-white"
+                onClick={onClose}
+              >
+                <Waves className="mr-3 h-5 w-5" />
+                <span>Whale Watch</span>
+              </Link>
+              <Link
+                to="/"
+                className="group flex items-center rounded-lg px-4 py-3 text-gray-300 transition-colors hover:bg-white/10 hover:text-white"
+                onClick={onClose}
+              >
+                <Calendar className="mr-3 h-5 w-5" />
+                <span>Airdrop Calendar</span>
+              </Link>
+              <Link
+                to="/"
+                className="group flex items-center rounded-lg px-4 py-3 text-gray-300 transition-colors hover:bg-white/10 hover:text-white"
+                onClick={onClose}
+              >
+                <Map className="mr-3 h-5 w-5" />
+                <span>Crypto Heat Map</span>
+              </Link>
+            </nav>
+          </div>
         </div>
       </div>
     </div>

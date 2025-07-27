@@ -1,10 +1,11 @@
 import { useState, useRef } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import Navigation from './components/Navigation';
 import Sidebar from './components/Sidebar';
 import MainContent from './components/MainContent';
+import FearAndGreedIndex from './pages/FearAndGreedIndex';
 import './index.css';
 
 function App() {
@@ -30,10 +31,13 @@ function App() {
         <Navigation toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
         <div className="relative flex-1">
           <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-          <MainContent />
+          <Routes>
+            <Route path="/" element={<MainContent />} />
+            <Route path="/fear-greed-index" element={<FearAndGreedIndex />} />
+          </Routes>
         </div>
         <footer className="py-4 text-center text-gray-400 text-sm">
-          © {new Date().getFullYear()} MarketFuel. All rights reserved.
+        © {new Date().getFullYear()} MarketFuel. All rights reserved.
         </footer>
       </div>
     </Router>
