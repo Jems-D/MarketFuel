@@ -6,6 +6,7 @@ import Navigation from './components/Navigation';
 import Sidebar from './components/Sidebar';
 import MainContent from './components/MainContent';
 import FearAndGreedIndex from './pages/FearAndGreedIndex';
+import GasPrices from "./pages/GasPrices";
 import './index.css';
 
 function App() {
@@ -28,16 +29,23 @@ function App() {
   return (
     <Router>
       <div className="flex min-h-screen flex-col bg-[#262525] text-white">
-        <Navigation toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
+        <Navigation
+          toggleSidebar={toggleSidebar}
+          isSidebarOpen={isSidebarOpen}
+        />
         <div className="relative flex-1">
-          <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+          <Sidebar
+            isOpen={isSidebarOpen}
+            onClose={() => setIsSidebarOpen(false)}
+          />
           <Routes>
             <Route path="/" element={<MainContent />} />
             <Route path="/fear-greed-index" element={<FearAndGreedIndex />} />
+            <Route path="/gas-prices" element={<GasPrices />} />
           </Routes>
         </div>
         <footer className="py-4 text-center text-gray-400 text-sm">
-        © {new Date().getFullYear()} MarketFuel. All rights reserved.
+          © {new Date().getFullYear()} MarketFuel. All rights reserved.
         </footer>
       </div>
     </Router>

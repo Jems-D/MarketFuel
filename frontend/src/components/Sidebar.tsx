@@ -65,7 +65,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 <span>Dashboard</span>
               </Link>
               <Link
-                to="/"
+                to="/gas-prices"
                 className="group flex items-center rounded-lg px-4 py-3 text-gray-300 transition-colors hover:bg-white/10 hover:text-white"
                 onClick={onClose}
               >
