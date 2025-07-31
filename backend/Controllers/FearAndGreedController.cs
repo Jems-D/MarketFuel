@@ -7,8 +7,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace backend.Controllers
 {
+    [ApiVersion("1.0")]
     [ApiController]
     [Route("api/v{version:apiVersion}/fearandgreed")]
-    [ApiVersion("1.0")]
-    public class FearAndGreedController : ControllerBase { }
+    public class FearAndGreedController : ControllerBase
+    {
+        [MapToApiVersion("1.0")]
+        [HttpGet]
+        public async Task<IActionResult> Try()
+        {
+            return Ok();
+        }
+    }
 }
