@@ -32,6 +32,12 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddScoped<ILatestNews, LatestNewsService>();
 
+builder.Services.AddHttpClient<LatestNewsService>();
+
+builder.Services.AddLogging();
+
+builder.Services.AddTransient<LatestNewsService>();
+
 var app = builder.Build();
 
 app.MapControllers();

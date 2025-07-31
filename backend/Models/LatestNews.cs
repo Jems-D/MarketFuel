@@ -9,46 +9,46 @@ namespace backend.Models
     {
         public class NewsProperties
         {
-            public TYPE TYPE { get; set; }
-            public ID ID { get; set; }
-            public GUID GUID { get; set; }
-            public PUBLISHEDON PUBLISHED_ON { get; set; }
-            public PUBLISHEDONNS PUBLISHED_ON_NS { get; set; }
-            public IMAGEURL IMAGE_URL { get; set; }
-            public TITLE TITLE { get; set; }
-            public SUBTITLE SUBTITLE { get; set; }
-            public AUTHORS AUTHORS { get; set; }
-            public URL URL { get; set; }
-            public SOURCEID SOURCE_ID { get; set; }
-            public BODY BODY { get; set; }
-            public KEYWORDS KEYWORDS { get; set; }
-            public LANG LANG { get; set; }
-            public UPVOTES UPVOTES { get; set; }
-            public DOWNVOTES DOWNVOTES { get; set; }
-            public SCORE SCORE { get; set; }
-            public SENTIMENT SENTIMENT { get; set; }
-            public STATUS STATUS { get; set; }
-            public CREATEDON CREATED_ON { get; set; }
-            public CREATEDBY CREATED_BY { get; set; }
-            public CREATEDBYUSERNAME CREATED_BY_USERNAME { get; set; }
-            public UPDATEDON UPDATED_ON { get; set; }
-            public UPDATEDBY UPDATED_BY { get; set; }
-            public UPDATEDBYUSERNAME UPDATED_BY_USERNAME { get; set; }
-            public SOURCEDATA SOURCE_DATA { get; set; }
-            public CATEGORYDATA CATEGORY_DATA { get; set; }
-            public SOURCEKEY SOURCE_KEY { get; set; }
-            public NAME NAME { get; set; }
-            public SOURCETYPE SOURCE_TYPE { get; set; }
-            public LAUNCHDATE LAUNCH_DATE { get; set; }
-            public SORTORDER SORT_ORDER { get; set; }
-            public CALLTIMEOUT CALL_TIMEOUT { get; set; }
-            public SKIPARTICLEIMAGE SKIP_ARTICLE_IMAGE { get; set; }
-            public BENCHMARKSCORE BENCHMARK_SCORE { get; set; }
-            public LASTUPDATEDTS LAST_UPDATED_TS { get; set; }
-            public LASTARTICLEPUBLISHEDAT LAST_ARTICLE_PUBLISHED_AT { get; set; }
-            public LASTCALL LAST_CALL { get; set; }
-            public LASTCALLSUCCESS LAST_CALL_SUCCESS { get; set; }
-            public CATEGORY CATEGORY { get; set; }
+            public string? TYPE { get; set; }
+            public int? ID { get; set; }
+            public string? GUID { get; set; }
+            public int? PUBLISHED_ON { get; set; }
+            public int? PUBLISHED_ON_NS { get; set; }
+            public string? IMAGE_URL { get; set; }
+            public string? TITLE { get; set; }
+            public string? SUBTITLE { get; set; }
+            public string? AUTHORS { get; set; }
+            public string? URL { get; set; }
+            public int? SOURCE_ID { get; set; }
+            public string? BODY { get; set; }
+            public string? KEYWORDS { get; set; }
+            public string? LANG { get; set; }
+            public int? UPVOTES { get; set; }
+            public int? DOWNVOTES { get; set; }
+            public int? SCORE { get; set; }
+            public string? SENTIMENT { get; set; }
+            public string? STATUS { get; set; }
+            public int? CREATED_ON { get; set; }
+            public int? CREATED_BY { get; set; }
+            public string? CREATED_BY_USERNAME { get; set; }
+            public int? UPDATED_ON { get; set; }
+            public int? UPDATED_BY { get; set; }
+            public string? UPDATED_BY_USERNAME { get; set; }
+            public SOURCEDATA? SOURCE_DATA { get; set; }
+            public List<CATEGORYDATA?> CATEGORY_DATA { get; set; }
+            public SOURCEKEY? SOURCE_KEY { get; set; }
+            public NAME? NAME { get; set; }
+            public SOURCETYPE? SOURCE_TYPE { get; set; }
+            public LAUNCHDATE? LAUNCH_DATE { get; set; }
+            public SORTORDER? SORT_ORDER { get; set; }
+            public CALLTIMEOUT? CALL_TIMEOUT { get; set; }
+            public SKIPARTICLEIMAGE? SKIP_ARTICLE_IMAGE { get; set; }
+            public BENCHMARKSCORE? BENCHMARK_SCORE { get; set; }
+            public LASTUPDATEDTS? LAST_UPDATED_TS { get; set; }
+            public LASTARTICLEPUBLISHEDAT? LAST_ARTICLE_PUBLISHED_AT { get; set; }
+            public LASTCALL? LAST_CALL { get; set; }
+            public LASTCALLSUCCESS? LAST_CALL_SUCCESS { get; set; }
+            public CATEGORY? CATEGORY { get; set; }
         }
 
         public class AUTHORS
@@ -229,7 +229,7 @@ namespace backend.Models
 
         public class Root
         {
-            public Data Data { get; set; }
+            public List<NewsProperties> Data { get; set; }
             public Err Err { get; set; }
         }
 
