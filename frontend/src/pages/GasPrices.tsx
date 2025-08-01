@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import ethereumLogo from "../components/icons/ethereum.svg";
 import bitcoinLogo from "../components/icons/bnb.svg";
 import bnbLogo from "../components/icons/bitcoin.svg";
+import LowCard from "../components/GasPrices/LowCard.tsx";
+import MediumCard from "../components/GasPrices/MediumCard.tsx";
+import HighCard from "../components/GasPrices/HighCard.tsx";
 
 const GasPrices = () => {
   // ✅ State for dropdown open/close
@@ -81,40 +84,14 @@ const GasPrices = () => {
         {/* ✅ Gas Price Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* 🟢 LOW Card */}
-          <div className="rounded-lg bg-[#2E2E2E] p-6 shadow-md text-center">
-            <p className="text-green-400 font-bold text-lg flex items-center justify-center gap-2">
-              ⚡ LOW
-            </p>
-            <p className="text-2xl font-bold text-white mt-2">
-              0.0 GWEI / $~0.01
-            </p>
-            <p className="text-gray-400 text-sm mt-2">Base: 0 Priority: 0.1</p>
-            <p className="text-gray-400 text-sm">0 minutes 45 seconds</p>
-          </div>
+          <LowCard />
 
           {/* 🟡 MEDIUM Card */}
-          <div className="rounded-lg bg-[#2E2E2E] p-6 shadow-md text-center">
-            <p className="text-yellow-400 font-bold text-lg flex items-center justify-center gap-2">
-              ⚡ Medium
-            </p>
-            <p className="text-2xl font-bold text-white mt-2">
-              0.0 GWEI / $~0.01
-            </p>
-            <p className="text-gray-400 text-sm mt-2">Base: 0 Priority: 0.1</p>
-            <p className="text-gray-400 text-sm">0 minutes 45 seconds</p>
-          </div>
+          <MediumCard />
 
           {/* 🔴 HIGH Card */}
-          <div className="rounded-lg bg-[#2E2E2E] p-6 shadow-md text-center">
-            <p className="text-red-400 font-bold text-lg flex items-center justify-center gap-2">
-              ⚡ HIGH
-            </p>
-            <p className="text-2xl font-bold text-white mt-2">
-              0.0 GWEI / $~0.01
-            </p>
-            <p className="text-gray-400 text-sm mt-2">Base: 0 Priority: 0.1</p>
-            <p className="text-gray-400 text-sm">0 minutes 45 seconds</p>
-          </div>
+          <HighCard />
+
         </div>
         {/* ✅ TWO CLEAN BOXES */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
