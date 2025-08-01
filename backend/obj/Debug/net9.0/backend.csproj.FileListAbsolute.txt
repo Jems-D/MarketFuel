@@ -1,11 +1,3 @@
-C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\obj\Debug\net9.0\backend.csproj.AssemblyReference.cache
-C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\obj\Debug\net9.0\backend.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\obj\Debug\net9.0\backend.AssemblyInfoInputs.cache
-C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\obj\Debug\net9.0\backend.AssemblyInfo.cs
-C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\obj\Debug\net9.0\backend.csproj.CoreCompileInputs.cache
-C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\obj\Debug\net9.0\backend.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\obj\Debug\net9.0\backend.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\obj\Debug\net9.0\backend.sourcelink.json
 C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\bin\Debug\net9.0\appsettings.json
 C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\bin\Debug\net9.0\backend.staticwebassets.endpoints.json
@@ -24,6 +16,14 @@ C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\bin\Debug\net9.
 C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\bin\Debug\net9.0\Newtonsoft.Json.dll
 C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\bin\Debug\net9.0\Scalar.AspNetCore.dll
 C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\bin\Debug\net9.0\Sprache.dll
+C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\obj\Debug\net9.0\backend.csproj.AssemblyReference.cache
+C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\obj\Debug\net9.0\backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\obj\Debug\net9.0\backend.AssemblyInfoInputs.cache
+C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\obj\Debug\net9.0\backend.AssemblyInfo.cs
+C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\obj\Debug\net9.0\backend.csproj.CoreCompileInputs.cache
+C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\obj\Debug\net9.0\backend.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\obj\Debug\net9.0\backend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\obj\Debug\net9.0\backend.sourcelink.json
 C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\obj\Debug\net9.0\scopedcss\bundle\backend.styles.css
 C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\Timothy\Desktop\Important\MarketFuel\MarketFuel\backend\obj\Debug\net9.0\staticwebassets.build.json.cache

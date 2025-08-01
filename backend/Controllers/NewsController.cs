@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Asp.Versioning;
 using backend.Interfaces;
+using backend.Mappers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend.Controllers
@@ -30,7 +31,7 @@ namespace backend.Controllers
             {
                 return BadRequest("No news found");
             }
-            return Ok(latestnews);
+            return Ok(latestnews.Select(s => s.ToNewsDTOFromNews()).ToList());
         }
     }
 }
