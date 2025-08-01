@@ -4,6 +4,7 @@ using backend.Services;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
+var marketFuelCors = "allowOnlyOneOrigin";
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -28,6 +29,21 @@ apiVersioningBuilder.AddApiExplorer(options =>
     options.SubstituteApiVersionInUrl = true;
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(
+        name: marketFuelCors,
+        policy =>
+        {
+            policy
+                .WithOrigins("http://localhost:5173")
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials();
+        }
+    );
+});
+
 builder.Services.AddOpenApi();
 
 builder.Services.AddScoped<ILatestNews, LatestNewsService>();
@@ -39,6 +55,8 @@ builder.Services.AddLogging();
 builder.Services.AddTransient<LatestNewsService>();
 
 var app = builder.Build();
+
+app.UseCors(marketFuelCors);
 
 app.MapControllers();
 

@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ethereumLogo from "../components/icons/ethereum.svg";
 import bitcoinLogo from "../components/icons/bnb.svg";
 import bnbLogo from "../components/icons/bitcoin.svg";
+import type { News } from "../Model/News";
+import { FetchLatestNews } from "../Service/NewsService";
 import LowCard from "../components/GasPrices/LowCard.tsx";
 import MediumCard from "../components/GasPrices/MediumCard.tsx";
 import HighCard from "../components/GasPrices/HighCard.tsx";
@@ -9,12 +11,24 @@ import HighCard from "../components/GasPrices/HighCard.tsx";
 const GasPrices = () => {
   // ✅ State for dropdown open/close
   const [isOpen, setIsOpen] = useState(false);
-
+  const [newsData, setNewsData] = useState<News[]>([]);
   // ✅ State for selected crypto
   const [selectedCrypto, setSelectedCrypto] = useState({
     name: "Ethereum",
     logo: ethereumLogo,
-  }); 
+  });
+
+  useEffect(() => {
+    GetLatestNews();
+  }, []);
+
+  const GetLatestNews = async () => {
+    const news = await FetchLatestNews();
+    if (news) {
+      setNewsData(news);
+      console.log(news);
+    }
+  };
 
   // ✅ List of crypto options
   const cryptos = [
@@ -91,12 +105,9 @@ const GasPrices = () => {
 
           {/* 🔴 HIGH Card */}
           <HighCard />
-
         </div>
         {/* ✅ TWO CLEAN BOXES */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
-
-
           {/* 📦 Box 1 */}
           <div className="rounded-lg bg-[#2E2E2E] p-6 shadow-md">
             <div className="h-64 bg-[#262525] rounded-md flex items-center justify-center text-gray-400">
@@ -111,7 +122,6 @@ const GasPrices = () => {
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );
